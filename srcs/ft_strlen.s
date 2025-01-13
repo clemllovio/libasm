@@ -7,9 +7,12 @@ section .text
 	loop:
 		cmp byte [rdi], 0
 		jne increment
-		ret
+		jmp end
 
 	increment:
 		inc rax
 		inc rdi
 		jmp loop
+	
+	end:
+		ret
