@@ -1,3 +1,4 @@
 test.out
 .objs/
 libasm.a
+test_file.txt

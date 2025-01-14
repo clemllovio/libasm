@@ -5,4 +5,5 @@ int main(void) {
 	// ft_strcpy_test();
 	// ft_strcmp_test();
 	ft_write_test();
+	// ft_read_test();
 }
