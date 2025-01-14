@@ -1,5 +1,7 @@
 #include "library.h"
 
 int main(void) {
-	ft_strcpy_test();
+	// ft_strlen_test();
+	// ft_strcpy_test();
+	ft_strcmp_test();
 }

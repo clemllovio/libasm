@@ -11,10 +11,13 @@ DIR_TEST	=	test/
 DIR_OBJS	=	.objs/
 
 SRCS		=	ft_strlen.s\
-				ft_strcpy.s
+				ft_strcpy.s\
+				ft_strcmp.s
+
 TEST		=	main.c\
 				ft_strlen_test.c\
-				ft_strcpy_test.c
+				ft_strcpy_test.c\
+				ft_strcmp_test.c
 
 HEADERS		=	${INCLUDES}library.h
 OBJS		=	${addprefix ${DIR_OBJS},${addprefix ${DIR_SRCS},${SRCS:.s=.o}}}
