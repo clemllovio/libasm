@@ -1,4 +1,4 @@
-#include "library.h"
+#include "libasm.h"
 
 int main(void) {
 	// ft_strlen_test();
@@ -6,4 +6,5 @@ int main(void) {
 	// ft_strcmp_test();
 	ft_write_test();
 	// ft_read_test();
+	// ft_strdup_test();
 }
