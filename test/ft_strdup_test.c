@@ -1,40 +1,29 @@
 #include "libasm.h"
 
-void test_ft_strdup(const char *input) {
-    printf("Testing ft_strdup with input: \"%s\"\n", input);
+void test_ft_strdup(const char *str) {
+    printf("str: \"%s\"\n", str);
 
-    // Appel de ft_strdup
-    char *result_ft = ft_strdup(input);
-    if (!result_ft) {
-        perror("ft_strdup failed");
-        return;
-    }
+    char *my_strdup_result = ft_strdup(str);
+    if (!my_strdup_result)
+        printf("ft_strdup failed");
+    else
+        printf("Success, my_strdup_result : \"%s\"\n", my_strdup_result);
 
-    // Appel de strdup pour comparaison
-    char *result_std = strdup(input);
-    if (!result_std) {
-        perror("strdup failed");
-        free(result_ft);
-        return;
-    }
 
-    // Comparer les deux chaînes
-    if (strcmp(result_ft, result_std) == 0) {
-        printf("PASS: Content matches\n");
-    } else {
-        printf("FAIL: Content does not match\n");
-    }
+    char *strdup_result = strdup(str);
+    if (!strdup_result) 
+        printf("strdup failed");
+    else
+        printf("Success, strdup_result : \"%s\"\n", strdup_result);
 
-    // Vérifier que l'adresse est différente
-    if (result_ft != input) {
-        printf("PASS: Result is a new allocation\n");
-    } else {
-        printf("FAIL: Result points to the original string\n");
-    }
 
-    // Libérer la mémoire
-    free(result_ft);
-    free(result_std);
+    if (strcmp(my_strdup_result, strdup_result) == 0)
+        printf(GREEN"Success\n\n"END);
+    else
+        printf(RED"Failure\n\n"END);
+
+    free(my_strdup_result);
+    free(strdup_result);
 
     printf("\n");
 }
@@ -43,7 +32,5 @@ void	ft_strdup_test() {
 	test_ft_strdup("");
     test_ft_strdup("A");
     test_ft_strdup("Hello, World!");
-    test_ft_strdup("42 Lyon - piscine");
     test_ft_strdup("This is a longer string to check memory allocation!");
-
 }

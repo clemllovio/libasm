@@ -1,8 +1,7 @@
 #include "libasm.h"
 
 void    print_ft_write(int fd, const char *str) {
-    ssize_t my_write_result;
-    ssize_t write_result;
+    ssize_t my_write_result, write_result;
     int my_write_ernno = 0;
     int write_ernno = 0;
     size_t len = strlen(str);
@@ -34,7 +33,6 @@ void ft_write_test() {
     int fd = open("output.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
     if (fd < 0)
         return;
-
 
     print_ft_write(fd, "");
     print_ft_write(fd, "Hello, world!\n");
