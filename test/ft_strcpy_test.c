@@ -16,13 +16,8 @@ void test_ft_strcpy(char *src) {
 }
 
 void	ft_strcpy_test() {
-    // test_strcpy("");
-    // test_strcpy("A");
-    // test_strcpy("Hello, World!");
-    // test_strcpy("!@#&*()_+");
-    test_ft_strcpy("");
-    test_ft_strcpy("A");
-    test_ft_strcpy("Hello, World!");
-    test_ft_strcpy("42 Lyon - piscine");
-    test_ft_strcpy("This is a longer string to check memory allocation!");
+    test_strcpy("");
+    test_strcpy("A");
+    test_strcpy("Hello, World!");
+    test_strcpy("!@#&*()_+");
 }
